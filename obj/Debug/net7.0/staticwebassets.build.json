@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "S6uhGryo4eMsxbJygDhuu0mmo6uB5y0dNUcJrwQmE60=",
+  "Source": "study-docker",
+  "BasePath": "_content/study-docker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

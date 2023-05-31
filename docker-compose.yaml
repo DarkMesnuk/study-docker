@@ -1,0 +1,26 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    depends_on:
+      - db
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Port=3306;Database=KB39;Uid=root;Pwd=secret;
+  db:
+    image: mysql:8.0
+    restart: on-failure
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=KB39
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - students-app-network
+networks:
+  students-app-network:
+    driver: bridge
+volumes:
+  mysql-data:
